@@ -1,0 +1,12 @@
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def display_info():
+    full_name = "ChatGPT"
+    address = "123 AI Street, Chat City, Virtual World"
+    return f"Full Name: {full_name}<br>Address: {address}"
+
+if __name__ == '__main__':
+    app.run(debug=True)
